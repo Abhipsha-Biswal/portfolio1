@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Abhipsha Biswal | Portfolio</title>
+<style>
+:root{--bg:#f7f8fc;--card:#fff;--tx:#1b1f3b;--mu:#5d6385;--ac:#6c4cf1;--ac2:#00b8d9;--bd:#e5e7f2;--sh:0 8px 30px rgba(60,50,140,.08);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1122;--card:#181b33;--tx:#eceefe;--mu:#9aa0c6;--bd:#272b4d;--sh:0 8px 30px rgba(0,0,0,.4)}}
+:root[data-theme="dark"]{--bg:#0f1122;--card:#181b33;--tx:#eceefe;--mu:#9aa0c6;--bd:#272b4d;--sh:0 8px 30px rgba(0,0,0,.4)}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+body{background:var(--bg);color:var(--tx);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;line-height:1.65}
+a{color:inherit;text-decoration:none}
+.w{max-width:1080px;margin:auto;padding:0 22px}
+section{padding:84px 0}
+.av img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+h2{font-size:clamp(1.7rem,4vw,2.3rem);margin-bottom:8px}
+h2+p{color:var(--mu);margin-bottom:34px}
+.g{background:linear-gradient(90deg,var(--ac),var(--ac2));-webkit-background-clip:text;background-clip:text;color:transparent}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:color-mix(in srgb,var(--bg) 85%,transparent);backdrop-filter:blur(12px);border-bottom:1px solid var(--bd)}
+nav .w{display:flex;align-items:center;justify-content:space-between;height:62px}
+.logo{font-weight:800;font-size:1.15rem}
+.links{display:flex;gap:20px;font-size:.92rem;color:var(--mu);overflow-x:auto;scrollbar-width:none}
+.links a{white-space:nowrap}.links a:hover{color:var(--ac)}
+@media(max-width:760px){.logo{display:none}.links{gap:16px;width:100%}}
+.btn{display:inline-block;padding:12px 26px;border-radius:12px;font-weight:600;border:1px solid var(--ac);transition:.25s;cursor:pointer}
+.p{background:linear-gradient(135deg,var(--ac),var(--ac2));color:#fff;border:0}
+.btn:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(108,76,241,.3)}
+#home{min-height:88vh;display:flex;align-items:center;position:relative;overflow:hidden}
+.blob{position:absolute;border-radius:50%;filter:blur(70px);opacity:.35;animation:fl 9s ease-in-out infinite}
+.b1{width:320px;height:320px;background:var(--ac);top:-60px;right:-40px}
+.b2{width:260px;height:260px;background:var(--ac2);bottom:-40px;left:-60px;animation-delay:-4s}
+@keyframes fl{50%{transform:translate(30px,-30px) scale(1.1)}}
+.hero{position:relative;display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center}
+@media(max-width:820px){.hero{grid-template-columns:1fr;text-align:center}.hero .cta{justify-content:center}}
+.tag{display:inline-block;padding:6px 14px;border:1px solid var(--bd);background:var(--card);border-radius:99px;font-size:.85rem;color:var(--mu);margin-bottom:18px}
+h1{font-size:clamp(2.2rem,6vw,3.7rem);line-height:1.1;margin-bottom:14px}
+.typ{font-size:1.25rem;color:var(--mu);min-height:1.9em;margin-bottom:26px}
+.typ b{color:var(--ac)}
+.cur{display:inline-block;width:2px;height:1.1em;background:var(--ac);vertical-align:-3px;animation:bl 1s steps(2) infinite}
+@keyframes bl{50%{opacity:0}}
+.cta{display:flex;gap:14px;flex-wrap:wrap}
+.av{width:min(260px,70vw);aspect-ratio:1;margin:auto;border-radius:30% 70% 60% 40%/40% 40% 60% 60%;background:linear-gradient(135deg,var(--ac),var(--ac2));display:grid;place-items:center;color:#fff;font-size:4.5rem;font-weight:800;animation:mo 8s ease-in-out infinite;box-shadow:var(--sh)}
+@keyframes mo{50%{border-radius:60% 40% 40% 60%/60% 60% 40% 40%;transform:rotate(4deg)}}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:18px;padding:26px;box-shadow:var(--sh);transition:.3s}
+.card:hover{transform:translateY(-6px);border-color:var(--ac)}
+.grid{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:22px}
+.stats div{text-align:center;padding:16px 8px;background:var(--card);border:1px solid var(--bd);border-radius:14px}
+.stats b{display:block;font-size:1.5rem}.stats span{font-size:.8rem;color:var(--mu)}
+.sk{margin-bottom:16px}.sk div:first-child{display:flex;justify-content:space-between;font-size:.92rem;font-weight:600;margin-bottom:6px}
+.bar{height:8px;background:var(--bd);border-radius:9px;overflow:hidden}
+.bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--ac),var(--ac2));border-radius:9px;transition:width 1.4s cubic-bezier(.2,.8,.2,1)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.chips span{padding:5px 12px;font-size:.8rem;border-radius:99px;background:color-mix(in srgb,var(--ac) 12%,transparent);color:var(--ac);font-weight:600}
+.tl{border-left:2px solid var(--bd);padding-left:26px;position:relative}
+.tl::before{content:"";position:absolute;left:-7px;top:6px;width:12px;height:12px;border-radius:50%;background:var(--ac);box-shadow:0 0 0 5px color-mix(in srgb,var(--ac) 20%,transparent)}
+.ic{font-size:2rem;margin-bottom:10px}
+.mu{color:var(--mu);font-size:.95rem}
+.rs{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+.av img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+}
+@media(max-width:760px){.rs{grid-template-columns:1fr}}
+.ct{max-width:640px;margin:auto;display:grid;gap:16px}
+.ct a.card{display:flex;align-items:center;gap:18px}
+.ct .ci{width:48px;height:48px;border-radius:14px;display:grid;place-items:center;font-size:1.4rem;background:linear-gradient(135deg,var(--ac),var(--ac2));flex:none}
+.ct small{color:var(--mu);display:block}
+footer{text-align:center;padding:28px;color:var(--mu);font-size:.88rem;border-top:1px solid var(--bd)}
+.rv{opacity:0;transform:translateY(34px);transition:opacity .8s,transform .8s}
+.rv.on{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<nav><div class="w"><a href="#home" class="logo g">Abhipsha.</a>
+<div class="links"><a href="#home">Home</a><a href="#about">About</a><a href="#skills">Skills</a><a href="#education">Education</a><a href="#projects">Projects</a><a href="#certs">Certifications</a><a href="#resume">Resume</a><a href="#contact">Contact</a></div></div></nav>
+
+<section id="home"><div class="blob b1"></div><div class="blob b2"></div>
+<div class="w hero"><div>
+<span class="tag">👋 Welcome to my portfolio</span>
+<h1>Hi, I'm <span class="g">Abhipsha Biswal</span></h1>
+<div class="typ">Aspiring <b id="ty"></b><span class="cur"></span></div>
+<p class="mu" style="margin-bottom:26px;max-width:520px">B.Tech CSE student at ITER, SOA University, passionate about turning data into insights and building smart, useful AI solutions.</p>
+<div class="cta"><a class="btn p" href="#projects">View Projects</a><a class="btn" href="#contact">Contact Me</a></div></div>
+<div class="av">
+  <img src="./Abhipsha_Passphoto.jpg"
+       alt="Abhipsha Biswal">
+</div>
+
+<section id="about"><div class="w rv"><h2>About <span class="g">Me</span></h2><p>A little about who I am</p>
+<div class="rs"><div class="card"><p>I'm a Computer Science Engineering student who enjoys solving problems with code and data. I've worked with Python, SQL and Power BI, and gained hands-on exposure to AI/ML through an internship.</p><br><p>My goal is to grow into a <b>Data Scientist</b>, building models and dashboards that help people make better decisions.</p></div>
+<div><div class="card"><div class="ic">🎯</div><b>Career Goal</b><p class="mu">Data Scientist</p></div>
+<div class="stats"><div><b class="cn" data-n="10">0</b><span>Skills</span></div><div><b class="cn" data-n="1">0</b><span>Project</span></div><div><b class="cn" data-n="1">0</b><span>Internship</span></div></div></div></div></div></section>
+
+<section id="skills"><div class="w rv"><h2>My <span class="g">Skills</span></h2><p>Technologies and tools I work with</p>
+<div class="grid">
+<div class="card"><b>💻 Programming</b><div style="height:14px"></div>
+<div class="sk"><div><span>Python</span><span>85%</span></div><div class="bar"><i data-w="85"></i></div></div>
+<div class="sk"><div><span>Java</span><span>70%</span></div><div class="bar"><i data-w="70"></i></div></div>
+<div class="sk"><div><span>JavaScript</span><span>75%</span></div><div class="bar"><i data-w="75"></i></div></div></div>
+<div class="card"><b>🌐 Web Development</b><div style="height:14px"></div>
+<div class="sk"><div><span>HTML &amp; CSS</span><span>90%</span></div><div class="bar"><i data-w="90"></i></div></div>
+<div class="sk"><div><span>React</span><span>70%</span></div><div class="bar"><i data-w="70"></i></div></div></div>
+<div class="card"><b>📊 Data &amp; Analytics</b><div style="height:14px"></div>
+<div class="sk"><div><span>SQL / MySQL</span><span>80%</span></div><div class="bar"><i data-w="80"></i></div></div>
+<div class="sk"><div><span>Power BI</span><span>75%</span></div><div class="bar"><i data-w="75"></i></div></div>
+<div class="sk"><div><span>MS Excel</span><span>85%</span></div><div class="bar"><i data-w="85"></i></div></div></div></div>
+<div class="chips"><span>Python</span><span>HTML</span><span>CSS</span><span>JavaScript</span><span>React</span><span>SQL</span><span>Java</span><span>MS Excel</span><span>Power BI</span><span>MySQL</span></div></div></section>
+
+<section id="education"><div class="w rv"><h2><span class="g">Education</span></h2><p>My academic journey</p>
+<div class="tl"><div class="card"><div class="ic">🎓</div><b>B.Tech in Computer Science &amp; Engineering</b><p class="mu">Institute of Technical Education and Research (ITER), Siksha 'O' Anusandhan University</p><div class="chips"><span>CSE</span><span>Undergraduate</span></div></div></div></div></section>
+
+<section id="projects"><div class="w rv"><h2>My <span class="g">Projects</span></h2><p>Things I've built</p>
+<div class="grid"><div class="card"><div class="ic">🛡️</div><b style="font-size:1.15rem">AI-Powered Danger Detection</b><p class="mu" style="margin:8px 0">An AI-based system that detects potentially dangerous situations to help improve safety through intelligent, real-time analysis.</p><div class="chips"><span>Python</span><span>AI / ML</span></div></div>
+<div class="card" style="display:grid;place-items:center;text-align:center;border-style:dashed"><div><div class="ic">🚀</div><b>More coming soon</b><p class="mu">Currently learning and building</p></div></div></div></div></section>
+
+<section id="certs"><div class="w rv"><h2><span class="g">Certifications</span></h2><p>Learning and experience</p>
+<div class="grid"><div class="card"><div class="ic">🏅</div><b>AIML Internship</b><p class="mu">Hands-on experience in Artificial Intelligence and Machine Learning.</p></div></div></div></section>
+
+<section id="resume"><div class="w rv"><h2>My <span class="g">Resume</span></h2><p>A quick snapshot of my profile</p>
+<div class="card" style="text-align:center;max-width:620px;margin:auto"><div class="ic">📄</div><b style="font-size:1.2rem">Abhipsha Biswal</b><p class="mu">B.Tech CSE · ITER, SOA University · Aspiring Data Scientist</p><br><a class="btn p" href="#" onclick="alert('Add your resume PDF link here before publishing.');return false">⬇ Download Resume</a></div></div></section>
+
+<section id="contact"><div class="w rv"><h2>Get In <span class="g">Touch</span></h2><p>Let's connect. I'd love to hear from you.</p>
+<div class="ct">
+<a class="card" href="https://wa.me/918249717993" target="_blank" rel="noopener"><span class="ci">💬</span><span><small>WhatsApp</small><b>+91 82497 17993</b></span></a>
+<a class="card" href="tel:+918249717993"><span class="ci">📞</span><span><small>Phone</small><b>+91 82497 17993</b></span></a>
+<div class="card"><div style="display:flex;gap:18px;align-items:center"><span class="ci">📍</span><span><small>Studying at</small><b>ITER, SOA University</b></span></div></div>
+</div></div></section>
+
+<footer>© 2026 Abhipsha Biswal · Built with ❤️</footer>
+
+<script>
+var r=["Data Scientist","ML Engineer","Data Analyst"],i=0,j=0,d=0,t=document.getElementById("ty");
+(function k(){var w=r[i];t.textContent=w.slice(0,j);if(!d&&j++==w.length){d=1;return setTimeout(k,1400)}if(d&&j--==0){d=0;i=(i+1)%r.length}setTimeout(k,d?45:90)})();
+var o=new IntersectionObserver(function(e){e.forEach(function(x){if(!x.isIntersecting)return;var s=x.target;s.classList.add("on");
+s.querySelectorAll(".bar i").forEach(function(b){b.style.width=b.dataset.w+"%"});
+s.querySelectorAll(".cn").forEach(function(c){var n=+c.dataset.n,v=0,h=setInterval(function(){c.textContent=++v;if(v>=n)clearInterval(h)},120)});o.unobserve(s)})},{threshold:.15});
+document.querySelectorAll(".rv").forEach(function(s){o.observe(s)});
+</script>
+</body>
+</html>
